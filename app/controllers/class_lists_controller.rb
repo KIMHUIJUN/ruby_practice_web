@@ -19,7 +19,7 @@ class ClassListsController < ApplicationController
   # GET /class_lists/1/edit
   def edit
   end
-#SPSD
+#SSS
   # POST /class_lists or /class_lists.json
   def create
     @class_list = ClassList.new(class_list_params)
