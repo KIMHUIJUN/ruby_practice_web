@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Cotent:</strong>
+  <%= @article.content %>
+</p>
+<h4> 댓글 <%= @comments.size %> 개</h4>
+<ul>
+    <% @comments.each do |comment| %>
+        <li><%= comment.comment %></td>
+        
+    <% end %>
+  </ul>
+<% if @comments.size < 5 %>
+<%= render 'comments/form', comment: @comment %>
+<% else %>
+<p>
+	신청종료
+</p>
+<% end %>
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>

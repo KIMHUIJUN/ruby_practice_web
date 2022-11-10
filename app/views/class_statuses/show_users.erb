@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<h1>
+	Show Users List
+</h1>
+
+<p>
+  <strong>과목명:</strong>
+  <%= @class_list.c_name %>
+</p>
+
+<p>
+  <strong>Class list:</strong>
+  <%= @users.size %>
+</p>
+<table>
+	<thread>
+		<tr>
+			<th>User ID</th>
+			<th>E-mail</th>
+		</tr>
+	</thread>
+	<% @users.each do |user| %>
+	<tr>
+		<td><%= user.id %></td>
+		<td><%= user.email %></td>
+	</tr>
+	<%end%>
+	<tbody>
+	
+	</tbody>
+</table>
+
+<%= link_to 'Back', class_statuses_path %>
